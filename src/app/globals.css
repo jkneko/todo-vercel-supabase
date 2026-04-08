@@ -1,0 +1,292 @@
+:root {
+  --background: #0b1020;
+  --background-soft: #111831;
+  --surface: rgba(17, 24, 49, 0.9);
+  --surface-border: rgba(148, 163, 184, 0.18);
+  --foreground: #e5eefb;
+  --muted: #9fb0cc;
+  --primary: #70a5ff;
+  --primary-strong: #4b8cff;
+  --success: #7ce3b4;
+  --danger: #ff9797;
+  --shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+}
+
+html {
+  height: 100%;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  min-height: 100%;
+  color: var(--foreground);
+  background:
+    radial-gradient(circle at top, rgba(112, 165, 255, 0.18), transparent 30%),
+    linear-gradient(180deg, #0a0f1f 0%, #0b1020 100%);
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.container {
+  width: min(100%, 960px);
+  margin: 0 auto;
+  padding: 48px 20px 96px;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--surface-border);
+  border-radius: 20px;
+  box-shadow: var(--shadow);
+  padding: 24px;
+}
+
+.stack-xs {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.stack-sm {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.stack-md {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.stack-lg {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.row {
+  display: flex;
+}
+
+.wrap {
+  flex-wrap: wrap;
+}
+
+.grow {
+  flex: 1 1 320px;
+}
+
+.gap-sm {
+  gap: 12px;
+}
+
+.gap-md {
+  gap: 16px;
+}
+
+.spaceBetween {
+  justify-content: space-between;
+}
+
+.alignStart {
+  align-items: flex-start;
+}
+
+.eyebrow {
+  color: var(--primary);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: clamp(32px, 6vw, 52px);
+  line-height: 1.05;
+}
+
+h2 {
+  font-size: 22px;
+  line-height: 1.2;
+}
+
+.lead,
+.muted {
+  color: var(--muted);
+}
+
+.lead {
+  max-width: 760px;
+  line-height: 1.7;
+  font-size: 17px;
+}
+
+.input {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 14px;
+  border: 1px solid rgba(148, 163, 184, 0.25);
+  background: rgba(15, 23, 42, 0.85);
+  color: var(--foreground);
+  outline: none;
+}
+
+.input:focus {
+  border-color: rgba(112, 165, 255, 0.7);
+  box-shadow: 0 0 0 4px rgba(112, 165, 255, 0.18);
+}
+
+.button,
+.buttonSecondary,
+.textButton {
+  border: none;
+  transition: transform 0.15s ease, opacity 0.15s ease, background 0.15s ease;
+}
+
+.button,
+.buttonSecondary {
+  padding: 14px 18px;
+  border-radius: 14px;
+  font-weight: 700;
+}
+
+.button {
+  background: linear-gradient(135deg, var(--primary), var(--primary-strong));
+  color: #041125;
+}
+
+.buttonSecondary {
+  background: rgba(148, 163, 184, 0.12);
+  color: var(--foreground);
+  border: 1px solid rgba(148, 163, 184, 0.2);
+}
+
+.button:disabled,
+.buttonSecondary:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.button:not(:disabled):hover,
+.buttonSecondary:not(:disabled):hover,
+.textButton:hover {
+  transform: translateY(-1px);
+}
+
+.successText {
+  color: var(--success);
+}
+
+.errorText {
+  color: var(--danger);
+}
+
+.featureList,
+.todoList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding-left: 20px;
+}
+
+.todoList {
+  padding-left: 0;
+  list-style: none;
+}
+
+.todoItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 14px 16px;
+  border-radius: 16px;
+  background: rgba(15, 23, 42, 0.75);
+  border: 1px solid rgba(148, 163, 184, 0.14);
+}
+
+.todoCheck {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 1;
+}
+
+.todoTitle {
+  line-height: 1.5;
+}
+
+.todoTitleDone {
+  color: var(--muted);
+  text-decoration: line-through;
+}
+
+.textButton {
+  background: transparent;
+  color: var(--danger);
+  font-weight: 700;
+}
+
+.emptyState {
+  padding: 18px;
+  border-radius: 16px;
+  background: rgba(15, 23, 42, 0.6);
+  color: var(--muted);
+}
+
+.pill {
+  padding: 10px 14px;
+  border-radius: 999px;
+  background: rgba(112, 165, 255, 0.12);
+  border: 1px solid rgba(112, 165, 255, 0.2);
+  color: var(--primary);
+  font-weight: 700;
+}
+
+@media (max-width: 640px) {
+  .container {
+    padding: 24px 16px 56px;
+  }
+
+  .card {
+    padding: 18px;
+  }
+
+  .todoItem {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
