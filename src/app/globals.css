@@ -5,8 +5,8 @@
   --surface-border: rgba(148, 163, 184, 0.28);
   --foreground: #162033;
   --muted: #5f6f86;
-  --primary: #3b82f6;
-  --primary-strong: #2563eb;
+  --primary: #16a34a;
+  --primary-strong: #15803d;
   --success: #138a5a;
   --danger: #d64545;
   --shadow: 0 20px 48px rgba(15, 23, 42, 0.10);
@@ -26,7 +26,7 @@ body {
   min-height: 100%;
   color: var(--foreground);
   background:
-    radial-gradient(circle at top, rgba(59, 130, 246, 0.14), transparent 28%),
+    radial-gradient(circle at top, rgba(22, 163, 74, 0.14), transparent 28%),
     linear-gradient(180deg, #f8fbff 0%, #eef4fb 100%);
   font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -166,8 +166,8 @@ h2 {
 }
 
 .input:focus {
-  border-color: rgba(59, 130, 246, 0.65);
-  box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.14);
+  border-color: rgba(22, 163, 74, 0.6);
+  box-shadow: 0 0 0 4px rgba(22, 163, 74, 0.14);
 }
 
 .button,
@@ -271,8 +271,8 @@ h2 {
 .pill {
   padding: 10px 14px;
   border-radius: 999px;
-  background: rgba(59, 130, 246, 0.10);
-  border: 1px solid rgba(59, 130, 246, 0.18);
+  background: rgba(22, 163, 74, 0.10);
+  border: 1px solid rgba(22, 163, 74, 0.18);
   color: var(--primary);
   font-weight: 700;
 }
